@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* COLORS */
@@ -22,7 +23,6 @@
 ::after {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
 }
 
 html {
@@ -132,7 +132,6 @@ h4 {
 
 .nav__menu .menu__top {
     display: none;
-    cursor: pointer;
 }
 
 .nav__logo h1 {
@@ -292,13 +291,13 @@ h4 {
     }
   
     .nav__menu .menu__top svg {
-      width: 1.6rem;
-      height: 1.6rem;
+      width: 1.2rem;
+      height: 1.2rem;
       fill: var(--white);
     }
   
-    .nav__menu .menu__top .close__toggle {
-      cursor: pointer;
+    .close__toggle {
+        cursor: pointer;
     }
   
     .nav__menu .menu__top {

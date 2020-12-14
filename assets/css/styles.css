@@ -227,3 +227,131 @@ h4 {
     height: 30px;
     line-height: 30px;
 }
+
+/* NAVIGATION MEDIA QUERY */
+@media only screen and (max-width: 996px) {
+    .nav__icons {
+      display: none;
+    }
+  
+    .nav__center {
+      grid-template-columns: 1fr 1fr;
+    }
+}
+  
+@media only screen and (max-width: 768px) {
+    .navigation {
+      background-color: var(--white);
+    }
+  
+    .nav__center {
+      grid-template-columns: 1fr;
+    }
+  
+    .nav__center .nav__hamburger {
+      display: block;
+    }
+  
+    .nav__center .nav__hamburger svg {
+      width: 3rem;
+      height: 3rem;
+      fill: var(--dark-color);
+    }
+  
+    .nav__center .nav__logo h1 {
+      color: var(--dark-color);
+    }
+  
+    .nav__header .nav__logo h1 span {
+      color: var(--default-color);
+    }
+  
+    .nav__center .nav__hamburger span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .nav__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+  
+    .nav__menu {
+      position: fixed;
+      top: 0;
+      left: -40rem;
+      height: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: start;
+      background-color: var(--white);
+      transition: all 0.3s ease-in-out;
+    }
+  
+    .nav__menu .menu__top svg {
+      width: 1.6rem;
+      height: 1.6rem;
+      fill: var(--white);
+    }
+  
+    .nav__menu .menu__top .close__toggle {
+      cursor: pointer;
+    }
+  
+    .nav__menu .menu__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem 1rem;
+      width: 100%;
+      background-color: var(--default-color);
+    }
+  
+    .nav__menu .nav__list {
+      background-color: var(--white);
+      justify-content: start;
+      flex-direction: column;
+      width: 30rem;
+      padding: 0;
+    }
+  
+    .nav__menu .nav__list .nav__item {
+      width: 100%;
+    }
+  
+    .nav__item .nav__link:link,
+    .nav__item .nav__link:visited {
+      width: 100%;
+      display: block;
+      font-size: 1.8rem;
+      color: var(--dark-color);
+    }
+  
+    .nav__list .nav__item .nav__link:last-child:link,
+    .nav__list .nav__item .nav__link:last-child:visited {
+      display: inline-block;
+      width: 50%;
+    }
+  
+    .nav__list .nav__item .nav__link:last-child:hover {
+      color: var(--default-color);
+    }
+  
+    .nav__item .nav__link:hover {
+      color: var(--default-color);
+    }
+  
+    body.active::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 70;
+    }
+}
